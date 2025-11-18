@@ -5,57 +5,89 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Mi página</title>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="https://www.shutterstock.com/image-vector/solaire-astora-dark-souls-praise-260nw-2071562768.jpg" height="32" width="32"/>
 </head>
 <body>
-  <h1>Página de mis videojuegos favoritos</h1>
-  <p>Este es mi top de de juegos favoritos a lo largo de mi vida</p>
 
-  <h2>Dark Souls III</h2>
-  <figure>
-    <img src="https://github.com/oscarbravovillada/paginaweb/raw/main/darksouls3imagen.jpg" alt="Dark Souls III" height="480" width="720">
-  </figure>
-  <p>Géneros: RPG, Fantasía Oscura, Aventura, Rol</p>
-  <p>Desarrollador: FromSoftware</p>
-  <button type="button" onclick="location.href='ds3.html'">Haz clic aquí para más información</button>
+  <nav class="site-nav">
+    <div class="container">
+      <div class="logo">OscarGameNotes</div>
+      <div class="nav-links" role="navigation" aria-label="Menú principal">
+        <a href="#">Inicio</a>
+        <a href="#games">Juegos</a>
+        <a href="notas.html">Notas</a>
+        <a href="#contact">Contacto</a>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </nav>
 
-  <h2>Elden Ring</h2>
-  <figure>
-    <img src="https://github.com/oscarbravovillada/paginaweb/raw/main/eldenringimage.jpg" alt="Elden Ring" height="480" width="720">
-  </figure>
-  <p>Géneros: RPG, Fantasía Oscura, Aventura, Rol</p>
-  <p>Desarrollador: FromSoftware</p>
-  <button type="button" onclick="location.href='eldenring.html'">Haz clic aquí para más información</button>
+  <main>
+    <section class="hero container">
+      <div class="left">
+        <h1>Página de mis videojuegos favoritos</h1>
+        <p>Este es mi top de juegos favoritos a lo largo de mi vida. Encuentra reseñas, capturas y enlaces a páginas con información detallada.</p>
+        <a class="btn btn-primary" href="#games">Ver mis juegos</a>
+      </div>
+    </section>
 
-  <h2>Skyrim</h2>
-  <figure>
-    <img src="https://github.com/oscarbravovillada/paginaweb/raw/main/skyrimimagen.jpg" alt="Skyrim" height="480" width="720">
-  </figure>
-  <p>Géneros: RPG, Fantasía, Aventura, Rol</p>
-  <p>Desarrollador: Bethesda Game Studios</p>
-  <button type="button" onclick="location.href='skyrim.html'">Haz clic aquí para más información</button>
+    <section id="games" class="games">
+      <div class="container">
+        <div class="games-grid">
+          <article class="card">
+            <img src="https://github.com/oscarbravovillada/paginaweb/raw/main/darksouls3imagen.jpg" alt="Dark Souls III">
+            <div class="card-body">
+              <h3>Dark Souls III</h3>
+              <p class="muted">RPG - Fantasía Oscura - Aventura</p>
+              <p class="developer">FromSoftware</p>
+              <a class="btn btn-ghost" href="ds3.html">Más información</a>
+            </div>
+          </article>
 
-  <h2>Baldur's Gate 3</h2>
-  <figure>
-    <img src="https://github.com/oscarbravovillada/paginaweb/raw/main/baldursgate3imagen.jpg" alt="Baldur's Gate 3" height="480" width="720">
-  </figure>
-  <p>Géneros: RPG, Alta Fantasía, Aventura, Rol, Decisiones</p>
-  <p>Desarrollador: Larian Studios</p>
-  <button type="button" onclick="location.href='bg3.html'">Haz clic aquí para más información</button>
+          <article class="card">
+            <img src="https://github.com/oscarbravovillada/paginaweb/raw/main/eldenringimage.jpg" alt="Elden Ring">
+            <div class="card-body">
+              <h3>Elden Ring</h3>
+              <p class="muted">RPG - Fantasía Oscura - Aventura</p>
+              <p class="developer">FromSoftware</p>
+              <a class="btn btn-ghost" href="eldenring.html">Más información</a>
+            </div>
+          </article>
 
-<!-- Esto sera una notas.html en un futur <h2>Notas de Juegos</h2>  -->
- 
- <!-- <P>He calificado estos juegos en una escala del 1 al 10 según mi experiencia personal:</p>
-  <ul>
-    <li>Dark Souls III: 9/10</li>
-    <li>Elden Ring: 10/10</li>
-    <li>Skyrim: 8/10</li>
-    <li>Baldur's Gate 3: 10/10</li> <!-->
+          <article class="card">
+            <img src="https://github.com/oscarbravovillada/paginaweb/raw/main/skyrimimagen.jpg" alt="Skyrim">
+            <div class="card-body">
+              <h3>Skyrim</h3>
+              <p class="muted">RPG - Fantasía Medieval - Aventura</p>
+              <p class="developer">Bethesda Game Studios</p>
+              <a class="btn btn-ghost" href="skyrim.html">Más información</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://github.com/oscarbravovillada/paginaweb/raw/main/baldursgate3imagen.jpg" alt="Baldur's Gate 3">
+            <div class="card-body">
+              <h3>Baldur's Gate 3</h3>
+              <p class="muted">RPG - Alta Fantasía - Decisiones</p>
+              <p class="developer">Larian Studios</p>
+              <a class="btn btn-ghost" href="bg3.html">Más información</a>
+            </div>
+          </article>
+
+        </div>
+        <p style="margin-top:1rem"><a class="btn btn-ghost" href="notas.html">Ver todas las notas y reviews</a></p>
+      </div>
+    </section>
+
+    <section id="contact" class="container" style="padding:1.5rem 1.25rem 3rem 1.25rem">
+      <h2>Contacto</h2>
+      <p class="muted">¿Tienes sugerencias o quieres compartir tu top? Escríbeme en <a href="#">mi correo</a> (próximamente).</p>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div> 2025 OscarGameNotes — Diseñado para fans de los videojuegos</div>
+  </footer>
 
 </body>
 </html>
-<!-- C --- PROVA --- -->
-<!-- git status # vore canvis
-git add .
-git commit -m "canvi"
-git push
---> 
