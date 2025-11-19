@@ -1,0 +1,133 @@
+/* Variables de color y tipografía (si quieres heredar del global, no hace falta repetirlas) */
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #e6eef8;
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  padding-top: var(--nav-height);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* Títulos */
+h1, h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+h2 {
+  margin-top: 2rem;
+}
+
+/* Tabla de notas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+th {
+  background: rgba(255,255,255,0.05);
+}
+
+tr:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+/* Formulario */
+form {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+form label {
+  display: block;
+  margin: 0.75rem 0 0.25rem 0;
+  font-weight: 500;
+}
+form select {
+  color: #fff; /* color del texto */
+  background-color: rgba(255,255,255,0.02); /* mismo fondo que los inputs */
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+form select option {
+  color: #000; /* color del texto dentro del desplegable */
+  background-color: #fff; /* fondo de las opciones */
+}
+
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.02);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+form input:disabled {
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+}
+
+form button {
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #071026;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+}
+
+/* Footer */
+footer.site-footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  color: #fff;
+}
+
+footer.site-footer a.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+footer.site-footer a.btn:hover {
+  background-color: #666;
+}
+
+/* Accesibilidad: focus */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid rgba(10,102,194,0.45);
+  outline-offset: 2px;
+}

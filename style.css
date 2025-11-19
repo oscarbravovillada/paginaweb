@@ -80,17 +80,137 @@ nav.site-nav{
 /* Footer */
 footer.site-footer{max-width:1200px;margin:3rem auto;padding:1.2rem 1.25rem;color:var(--muted);font-size:0.9rem}
 
-/* Responsive */
-@media (max-width:880px){
-  .hero{flex-direction:column;align-items:flex-start}
-  .hero h1{font-size:1.75rem}
-}
-@media (max-width:720px){
-  .nav-links{display:none}
-  .nav-toggle{display:block;color:var(--muted);background:transparent;border:none}
-  .hero h1{font-size:1.5rem}
+
+
+    /* Estilos básicos para los bordes y sombras de las imágenes */
+    .card-full {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .card-body-full {
+      flex: 1 1 45%;
+    }
+    footer.site-footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #111;
+      color: #fff;
+    }
+    footer.site-footer a.btn {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #444;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    footer.site-footer a.btn:hover {
+      background-color: #666;
+    }
+/* Ajustes para la galería de imágenes más simétrica y compacta */
+.image-grid {
+  display: grid; /* usamos grid en lugar de flex para simetría perfecta */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
-/* Accessibility focus */
-a:focus,button:focus{outline:2px solid rgba(10,102,194,0.45);outline-offset:2px}
+.image-grid img {
+  width: 100%;
+  height: 140px; /* más compacto que antes */
+  object-fit: cover;
+  border: 2px solid #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,.6);
+  border-radius: 4px;
+  transition: transform 0.3s;
+}
 
+.image-grid img:hover {
+  transform: scale(1.03); /* efecto sutil al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr; /* una imagen por fila en móviles */
+  }
+  .image-grid img {
+    height: 160px; /* ligeramente más alta en móvil para compensar el ancho */
+  }
+}
+
+
+/* Lightbox modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-img {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lightbox .close:hover {
+  color: #ff6600;
+}
+
+.lightbox .prev,
+.lightbox .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.lightbox .prev { left: 20px; }
+.lightbox .next { right: 20px; }
+
+.lightbox .prev:hover,
+.lightbox .next:hover {
+  color: #ff6600;
+}
+
+
+.image-grid img {
+  object-fit: cover;
+  border: 2px solid #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,.6);
+  border-radius: 4px;
+  transition: transform 0.3s;
+  cursor: pointer; /* <-- Això indica que és clicable */
+}
+
+.image-grid img:hover {
+  transform: scale(1.03); /* efecte subtil */
+}
