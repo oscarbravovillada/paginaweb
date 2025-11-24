@@ -56,7 +56,7 @@ nav.site-nav {
 
 .nav-toggle { display: none; }
 
-/* Header DS3 */
+/* Header BG3 */
 .site-header {
   background-image: url('https://raw.githubusercontent.com/oscarbravovillada/paginaweb/main/imgs/baldursgate3header.jpg');
   background-size: cover;
@@ -100,7 +100,7 @@ nav.site-nav {
 .card .developer { color: #fff; font-weight: 600; margin-top: 0.35rem; font-size: 0.95rem; letter-spacing: 0.2px; }
 .tag { display: inline-block; padding: 0.2rem 0.45rem; border-radius: 999px; font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--muted); margin-top: 0.6rem; }
 
-/* Galería de imágenes DS3 - horizontal */
+/* Galería de imágenes bg3 - horizontal */
 .image-grid {
   display: flex;           /* fila horizontal */
   gap: 15px;               /* espacio entre imágenes */
@@ -163,7 +163,7 @@ nav.site-nav {
 .lightbox .prev { left: 30px; top: 50%; transform: translateY(-50%); }
 .lightbox .next { right: 30px; top: 50%; transform: translateY(-50%); }
 
-/* Footer DS3 */
+/* Footer bg3 */
 footer.site-footer {
   text-align: center;
   padding: 2rem;
