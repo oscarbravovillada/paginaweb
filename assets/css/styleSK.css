@@ -49,7 +49,8 @@ nav.site-nav {
   border-radius: 8px;
   transition: all 0.18s ease;
 }
-.nav-links a:hover, .nav-links a:focus {
+.nav-links a:hover,
+.nav-links a:focus {
   color: #fff;
   background: rgba(255,255,255,0.03);
 }
@@ -88,32 +89,67 @@ nav.site-nav {
 }
 
 /* Cards y contenido */
-.card-full { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+.card-full { 
+  display: flex; 
+  gap: 1rem; 
+  align-items: flex-start; 
+  flex-wrap: wrap; 
+}
 .card-body-full { flex: 1 1 45%; }
 
-.card { background: var(--card); border-radius: 12px; overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; border: 1px solid rgba(255,255,255,0.02); }
-.card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,0.6); }
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+}
 
-.card h3 { margin: 0 0 0.4rem 0; font-size: 1.05rem; }
-.card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.card h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.05rem;
+}
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
-.card .developer { color: #fff; font-weight: 600; margin-top: 0.35rem; font-size: 0.95rem; letter-spacing: 0.2px; }
-.tag { display: inline-block; padding: 0.2rem 0.45rem; border-radius: 999px; font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--muted); margin-top: 0.6rem; }
+.card .developer {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+}
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+  margin-top: 0.6rem;
+}
 
 /* Galería de imágenes bg3 - horizontal */
 .image-grid {
-  display: flex;           /* fila horizontal */
-  gap: 15px;               /* espacio entre imágenes */
-  justify-content: center; /* centrado */
+  display: flex;
+  gap: 15px;
+  justify-content: center;
   align-items: flex-start;
   margin-top: 20px;
-  flex-wrap: nowrap;       /* no se apilan, siempre horizontal */
-  overflow-x: auto;        /* permite scroll si no caben todas */
+  flex-wrap: nowrap;
+  overflow-x: auto;
   padding-bottom: 10px;
 }
 
 .image-grid img {
-  width: 200px;            /* ancho fijo de cada imagen */
+  width: 200px;
   height: 140px;
   object-fit: cover;
   border: 2px solid #333;
@@ -127,10 +163,9 @@ nav.site-nav {
   transform: scale(1.03);
 }
 
-
 /* Lightbox */
 .lightbox {
-  display: none;
+  display: none; /* ← CORREGIDO */
   position: fixed;
   top: 0;
   left: 0;
@@ -140,7 +175,6 @@ nav.site-nav {
   z-index: 1000;
   justify-content: center;
   align-items: center;
-  display: flex;
 }
 
 .lightbox-img {
