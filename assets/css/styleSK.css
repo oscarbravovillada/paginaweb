@@ -1,0 +1,186 @@
+:root {
+  --bg-1: #071026;
+  --bg-2: #0b1224;
+  --card: rgba(255,255,255,0.03);
+  --muted: rgba(255,255,255,0.6);
+  --accent: #0a66c2;
+  --accent-2: #00d4ff;
+  --glass: rgba(255,255,255,0.04);
+  --nav-height: 64px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #e6eef8;
+  background: linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  padding-top: var(--nav-height);
+}
+
+/* Navegación */
+nav.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.25rem;
+  background: linear-gradient(180deg, rgba(8,14,30,0.6), rgba(8,14,30,0.45));
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--glass);
+}
+
+.container { max-width: 1200px; margin: 0 auto; width: 100%; }
+
+.logo { font-weight: 700; color: var(--accent); letter-spacing: 0.4px; }
+
+.nav-links { display: flex; align-items: center; gap: 1rem; }
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px;
+  transition: all 0.18s ease;
+}
+.nav-links a:hover, .nav-links a:focus {
+  color: #fff;
+  background: rgba(255,255,255,0.03);
+}
+
+.nav-toggle { display: none; }
+
+/* Header BG3 */
+.site-header {
+  background-image: url('https://raw.githubusercontent.com/oscarbravovillada/paginaweb/main/imgs/skyrimheader.png');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.site-header .overlay {
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.site-header h1 {
+  font-size: 3rem;
+  margin: 0 0 10px;
+}
+
+.site-header p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Cards y contenido */
+.card-full { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+.card-body-full { flex: 1 1 45%; }
+
+.card { background: var(--card); border-radius: 12px; overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; border: 1px solid rgba(255,255,255,0.02); }
+.card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,0.6); }
+
+.card h3 { margin: 0 0 0.4rem 0; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
+.card .developer { color: #fff; font-weight: 600; margin-top: 0.35rem; font-size: 0.95rem; letter-spacing: 0.2px; }
+.tag { display: inline-block; padding: 0.2rem 0.45rem; border-radius: 999px; font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--muted); margin-top: 0.6rem; }
+
+/* Galería de imágenes bg3 - horizontal */
+.image-grid {
+  display: flex;           /* fila horizontal */
+  gap: 15px;               /* espacio entre imágenes */
+  justify-content: center; /* centrado */
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: nowrap;       /* no se apilan, siempre horizontal */
+  overflow-x: auto;        /* permite scroll si no caben todas */
+  padding-bottom: 10px;
+}
+
+.image-grid img {
+  width: 200px;            /* ancho fijo de cada imagen */
+  height: 140px;
+  object-fit: cover;
+  border: 2px solid #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  border-radius: 4px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+}
+
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lightbox .close { top: 20px; right: 30px; }
+.lightbox .prev { left: 30px; top: 50%; transform: translateY(-50%); }
+.lightbox .next { right: 30px; top: 50%; transform: translateY(-50%); }
+
+/* Footer bg3 */
+footer.site-footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  color: #fff;
+}
+
+footer.site-footer a.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+footer.site-footer a.btn:hover {
+  background-color: #666;
+}
