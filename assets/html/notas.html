@@ -1,105 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notas de Juegos - OscarGameNotes</title>
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/notas.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OscarGameNotes — Cómo puntuamos los juegos</title>
+  <link rel="stylesheet" href="../css/notas.css">
   <link rel ="icon" href="imgs/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <header>
+    <h1>OscarGameNotes — Cómo puntuamos los juegos</h1>
+    <p class="meta">Resumen rápido del sistema de valoración y un poco de mi infancia como jugador.</p>
+  </header>
 
-<nav class="site-nav">
-  <div class="container">
-    <div class="logo">OscarGameNotes</div>
-    <div class="nav-links" role="navigation" aria-label="Menú principal">
-      <a href="index.html">Inicio</a>
-      <a href="notas.html">Notas</a>
-      <a href="contact.html">Contacto</a>
+  <section class="card">
+    <h2>Sistema de puntuación (resumen)</h2>
+    <p class="meta">Cada juego recibe una puntuación total sobre 100 y una valoración por criterios (1–10). También mostramos una nota visual en estrellas (1–5).</p>
+
+    <div class="scores">
+      <div class="criterion card">
+        <strong>Jugabilidad</strong>
+        <div class="stars">★★★★☆</div>
+        <p class="meta">Peso: 30% — Cómo se siente jugarlo, controles y mecánicas.</p>
+      </div>
+
+      <div class="criterion card">
+        <strong>Historia & escritura</strong>
+        <div class="stars">★★★☆☆</div>
+        <p class="meta">Peso: 20% — Calidad narrativa, personajes, diálogos.</p>
+      </div>
+
+      <div class="criterion card">
+        <strong>Diseño de niveles & mundo</strong>
+        <div class="stars">★★★★★</div>
+        <p class="meta">Peso: 20% — Exploración, mapas, coherencia del mundo.</p>
+      </div>
+
+      <div class="criterion card">
+        <strong>Arte & sonido</strong>
+        <div class="stars">★★★★☆</div>
+        <p class="meta">Peso: 15% — Direcc. artística, banda sonora, efectos.</p>
+      </div>
+
+      <div class="criterion card">
+        <strong>Valoración & rejugabilidad</strong>
+        <div class="stars">★★★★☆</div>
+        <p class="meta">Peso: 15% — Horas de juego, contenido, motivación para volver.</p>
+      </div>
     </div>
-    <button class="nav-toggle" aria-label="Abrir menú">☰</button>
-  </div>
-</nav>
-<main class="container">
-  <h1>Notas de Juegos</h1>
-  <!-- Tabla de notas -->
-  <section>
-    <h2>Tabla de notas</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Juego</th>
-          <th>Plataforma</th>
-          <th>Nota</th>
-          <th>Comentario</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Dark Souls III</td>
-          <td>PS4, Xbox One, PC</td>
-          <td>9</td>
-          <td>Desafiante, atmosférico y muy rejugable</td>
-        </tr>
-        <tr>
-          <td>Elden Ring</td>
-          <td>PS4, PS5, Xbox, PC</td>
-          <td>9.8</td>
-          <td>Magnífico mundo abierto con gran libertad</td>
-        </tr>
-        <tr>
-          <td>Baldur's Gate 3</td>
-          <td>PS4, PS5, Xbox, PC, Mac</td>
-          <td>10</td>
-          <td>Clásico instantáneo con una narrativa profunda y diálogos excelentes</td>
-        </tr>
-        <tr>
-          <td>Skyrim</td>
-          <td>PS4, PS5, Xbox, PC, Switch</td>
-          <td>8.9</td>
-          <td>Inmenso y lleno de aventuras, jugabilidad y build variadas</td>
-        </tr>
-      </tbody>
-    </table>
+
+    <div class="example">
+      <strong>Ejemplo de cálculo:</strong>
+      <p class="meta">Si un juego recibe: Jugabilidad 9/10, Historia 7/10, Mundo 10/10, Arte 8/10, Rejugabilidad 8/10 — el total ponderado sería ~9*0.3 + 7*0.2 + 10*0.2 + 8*0.15 + 8*0.15 = 8.6/10 → 86/100.</p>
+    </div>
   </section>
 
-  <!-- Formularis -->
-  <section>
-    <h2>Enviar tus notas</h2>
-    <form action="#" method="post">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
-
-      <label for="juego">Juego:</label>
-      <select id="juego" name="juego" required>
-        <option value="">Selecciona un juego</option>
-        <option value="ds3">Dark Souls III</option>
-        <option value="eldenring">Elden Ring</option>
-        <option value="bg3">Baldur's Gate 3</option>
-        <option value="skyrim">Skyrim</option>
-      </select>
-
-      <label for="nota">Nota (0-10):</label>
-      <input type="number" id="nota" name="nota" min="0" max="10" required>
-
-      <label for="comentario">Comentario:</label>
-      <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe tu opinión..." required></textarea>
-
-    <label for="fecha">Fecha de envío:</label>   
-   <input type="date" id="fecha" name="fecha">
-
-      <button type="submit">Enviar Nota</button>
-    </form>
+  <section class="card">
+    <h2>Resumen de mi infancia como jugador</h2>
+    <p>Soy la persona detrás de <span class="badge">OscarGameNotes</span>. Crecí jugando a <strong>Skyrim</strong>, perdiéndome horas explorando mapas, creando personajes y disfrutando del mundo abierto. Más tarde descubrí la saga <strong>Dark Souls</strong>, que me enseñó a apreciar el diseño de combate desafiante y el diseño ambiental que recompensa la observación. Desde entonces, títulos como <strong>Elden Ring</strong> y <strong>Baldur's Gate 3</strong> me enamoraron: Elden Ring por su libertad y diseño interconectado, y Baldur's Gate 3 por su narrativa profunda y opciones de rol. Esa mezcla de mundos abiertos, retos exigentes y buena narrativa es la que guía cómo evaluamos los juegos en OscarGameNotes.</p>
   </section>
-</main>
-<footer class="site-footer">
-  <a class="btn" href="index.html">Ver juegos</a>
-  <p> &#169 2025 OscarGameNotes.</p>
-</footer>
 
+  <footer class="site-footer container">
+    <div> &#169 2025 OscarGameNotes</div>
+  </footer>
 </body>
+  <footer class="site-footer container">
+    <div>&#169; 2025 OscarGameNotes | <a href="index.html">Inicio</a> | <a href="notas.html">Notas</a> | <a href="contact.html">Contacto</a> | <a href="acerca.html">Acerca de</a></div>
+  </footer>
 </html>
