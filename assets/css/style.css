@@ -54,100 +54,178 @@ nav.site-nav{
 .nav-toggle{display:none}
 
 /* Hero */
-.hero{max-width:1200px;margin:2rem auto;padding:2rem 1.25rem;display:flex;align-items:center;gap:2rem}
+.hero{
+  max-width:1200px;
+  margin:2rem auto;
+  padding:2rem 1.25rem;
+  display:flex;
+  align-items:center;
+  gap:2rem;
+}
 .hero .left{flex:1}
-.hero h1{font-size:2.25rem;margin:0 0 0.5rem 0;color:linear-gradient(90deg,var(--accent),var(--accent-2));}
-.hero p{color:var(--muted);margin:0 0 1.25rem 0;max-width:60ch}
-.btn{display:inline-block;padding:0.7rem 1rem;border-radius:10px;font-weight:600;text-decoration:none;cursor:pointer}
-.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#071026;box-shadow:0 6px 20px rgba(10,102,194,0.12)}
-.btn-ghost{border:1px solid var(--glass);color:var(--muted);background:transparent}
+
+/* 🔥 TEXTO CON GRADIENTE — CORREGIDO */
+.hero h1{
+  font-size:2.25rem;
+  margin:0 0 0.5rem 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p{
+  color:var(--muted);
+  margin:0 0 1.25rem 0;
+  max-width:60ch;
+}
+
+.btn{
+  display:inline-block;
+  padding:0.7rem 1rem;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#071026;
+  box-shadow:0 6px 20px rgba(10,102,194,0.12);
+}
+
+.btn-ghost{
+  border:1px solid var(--glass);
+  color:var(--muted);
+  background:transparent;
+}
 
 /* Games grid */
-.games{max-width:1200px;margin:1.5rem auto;padding:0 1.25rem}
-.games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.25rem}
-.card{background:var(--card);border-radius:12px;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease;border:1px solid rgba(255,255,255,0.02)}
-.card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
-.card img{width:100%;height:140px;object-fit:cover;display:block}
+.games{
+  max-width:1200px;
+  margin:1.5rem auto;
+  padding:0 1.25rem;
+}
+
+.games-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:1.25rem;
+}
+
+.card{
+  background:var(--card);
+  border-radius:12px;
+  overflow:hidden;
+  transition:transform .18s ease,box-shadow .18s ease;
+  border:1px solid rgba(255,255,255,0.02);
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+}
+
+.card img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  display:block;
+}
+
 .card .card-body{padding:0.85rem}
 .card h3{margin:0 0 0.4rem 0;font-size:1.05rem}
 .card p{margin:0;color:var(--muted);font-size:0.9rem}
 
 /* Make the genre and developer visually distinct inside cards */
 .card .card-body > .muted:first-of-type{margin-bottom:0.45rem}
-.card .developer{color:#ffffff;font-weight:600;margin-top:0.35rem;font-size:0.95rem;letter-spacing:0.2px}
-.tag{display:inline-block;padding:0.2rem 0.45rem;border-radius:999px;font-size:0.75rem;background:rgba(255,255,255,0.03);color:var(--muted);margin-top:0.6rem}
+.card .developer{
+  color:#ffffff;
+  font-weight:600;
+  margin-top:0.35rem;
+  font-size:0.95rem;
+  letter-spacing:0.2px;
+}
+
+.tag{
+  display:inline-block;
+  padding:0.2rem 0.45rem;
+  border-radius:999px;
+  font-size:0.75rem;
+  background:rgba(255,255,255,0.03);
+  color:var(--muted);
+  margin-top:0.6rem;
+}
 
 /* Footer */
-footer.site-footer{max-width:1200px;margin:3rem auto;padding:1.2rem 1.25rem;color:var(--muted);font-size:0.9rem}
-
-
-
-    /* Estilos básicos para los bordes y sombras de las imágenes */
-    .card-full {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-    .card-body-full {
-      flex: 1 1 45%;
-    }
-    footer.site-footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #111;
-      color: #fff;
-    }
-    footer.site-footer a.btn {
-      display: inline-block;
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #444;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-    }
-    footer.site-footer a.btn:hover {
-      background-color: #666;
-    }
-/* Ajustes para la galería de imágenes más simétrica y compacta */
-.image-grid {
-  display: grid; /* usamos grid en lugar de flex para simetría perfecta */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+footer.site-footer{
+  max-width:1200px;
+  margin:3rem auto;
+  padding:1.2rem 1.25rem;
+  color:var(--muted);
+  font-size:0.9rem;
 }
 
-.image-grid img {
-  width: 100%;
-  height: 140px; /* más compacto que antes */
-  object-fit: cover;
-  border: 2px solid #333;
-  box-shadow: 0 2px 6px rgba(0,0,0,.6);
-  border-radius: 4px;
-  transition: transform 0.3s;
+.card-full{
+  display:flex;
+  gap:1rem;
+  align-items:flex-start;
+  flex-wrap:wrap;
 }
 
-.image-grid img:hover {
-  transform: scale(1.03); /* efecto sutil al pasar el mouse */
+.card-body-full{
+  flex:1 1 45%;
 }
 
-@media (max-width: 768px) {
-  .image-grid {
-    grid-template-columns: 1fr; /* una imagen por fila en móviles */
+footer.site-footer{
+  text-align:center;
+  padding:2rem;
+  background-color:#111;
+  color:#fff;
+}
+
+footer.site-footer a.btn{
+  display:inline-block;
+  margin-bottom:1rem;
+  padding:0.5rem 1rem;
+  background-color:#444;
+  color:#fff;
+  text-decoration:none;
+  border-radius:4px;
+}
+
+footer.site-footer a.btn:hover{
+  background-color:#666;
+}
+
+/* Galería */
+.image-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+  gap:1rem;
+}
+
+.image-grid img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border:2px solid #333;
+  box-shadow:0 2px 6px rgba(0,0,0,.6);
+  border-radius:4px;
+  transition:transform 0.3s;
+  cursor:pointer;
+}
+
+.image-grid img:hover{
+  transform:scale(1.03);
+}
+
+@media (max-width: 768px){
+  .image-grid{
+    grid-template-columns:1fr;
   }
-  .image-grid img {
-    height: 160px; /* ligeramente más alta en móvil para compensar el ancho */
+  .image-grid img{
+    height:160px;
   }
-}
-.image-grid img {
-  object-fit: cover;
-  border: 2px solid #333;
-  box-shadow: 0 2px 6px rgba(0,0,0,.6);
-  border-radius: 4px;
-  transition: transform 0.3s;
-  cursor: pointer; /* <-- Això indica que és clicable */
-}
-
-.image-grid img:hover {
-  transform: scale(1.03); /* efecte subtil */
 }
